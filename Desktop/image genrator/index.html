@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Receipt Generator</h2>
+    <form id="receiptForm">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" step="0.01" required><br><br>
+
+      <label for="journalNumber">Journal Number:</label>
+      <input type="text" id="journalNumber" required><br><br>
+      <label for="RRNO">RRNO:</label>
+      <input type="text" id="RRNO" required><br><br>
+
+      <label for="fromAccount">From Account Number:</label>
+      <input type="text" id="fromAccount" required><br><br>
+
+      <label for="toAccount">To Account Number:</label>
+      <input type="text" id="toAccount" required><br><br>
+
+      <label for="beneficiaryName">Beneficiary Name:</label>
+      <textarea id="beneficiaryName"></textarea><br><br>
+
+      <label for="transactionDate">Transaction Date:</label>
+      <input type="date" id="transactionDate" required><br><br>
+
+      <label for="transactionTime">Transaction Time:</label>
+      <input type="text" id="transactionTime" placeholder="9:46:58 AM" required>
+      <button type="button" id="currentTimeBtn">Use Current Time</button><br><br>
+
+      <!-- <label for="width">Canvas Width (px):</label>
+      <input type="number" id="width" value="555"><br><br>
+
+      <label for="height">Canvas Height (px):</label>
+      <input type="number" id="height" value="1000"><br><br> -->
+
+      <button type="submit" id="generateBtn">Generate Receipt</button>
+    </form>
+
+    <div id="receiptContainer">
+      <h3>Your Receipt</h3>
+      <canvas id="receiptCanvas" width="700" height="1920"></canvas>
+      <br>
+      <button id="downloadBtn">Download Receipt as PNG</button>
+    </div>
+  </div>
+
+  <!-- Your JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
